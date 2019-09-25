@@ -1,0 +1,279 @@
+@php
+    function get_client_ip() {
+        $ipaddress = '';
+        if (isset($_SERVER['HTTP_CLIENT_IP']))
+            $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
+        else if(isset($_SERVER['HTTP_X_FORWARDED_FOR']))
+            $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        else if(isset($_SERVER['HTTP_X_FORWARDED']))
+            $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
+        else if(isset($_SERVER['HTTP_FORWARDED_FOR']))
+            $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
+        else if(isset($_SERVER['HTTP_FORWARDED']))
+            $ipaddress = $_SERVER['HTTP_FORWARDED'];
+        else if(isset($_SERVER['REMOTE_ADDR']))
+            $ipaddress = $_SERVER['REMOTE_ADDR'];
+        else
+            $ipaddress = 'UNKNOWN';
+        return $ipaddress;
+    }
+
+    function ip_details($ip) {
+        $json = file_get_contents("http://ipinfo.io/{$ip}/geo");
+        $details = json_decode($json); // HERE!!!
+        return $details;
+    }
+    $ipaddress = get_client_ip();
+    // echo $ipaddress;
+    $details = ip_details("103.96.51.32");
+    // $details = ip_details($ipaddress);
+    // echo $details->city; // CHANGE TO IP!!!
+@endphp
+
+
+@php
+    if ($details->city == "Guwahati") {
+      $location_id = '1';
+    }else {
+      $location_id = '0';
+    }
+@endphp
+
+
+<div class="tp-nav" id="headersticky">
+  <div class="container">
+    <h1 style="text-align: center;">Premium Ad Space</h1>
+  </div>
+</div>
+
+@extends('app')
+
+@section('head_title', 'Listings | '.getcong('site_name') )
+
+@section('head_url', Request::url())
+
+@section('content')
+
+<div class="tp-page-head" style="background:url({{ URL::asset('upload/'.getcong('page_bg_image'))}}) no-repeat">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="page-header">
+          <h1>Dentist's Near Me</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="tp-breadcrumb">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <ol class="breadcrumb">
+          <li><a href="{{ URL::to('/') }}">Home</a></li>
+          <li class="active">Listings</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="main-container">
+  <div class="container">
+    <div class="row">
+
+
+      <div id="featured-list" class="featured-listing">
+          <div class="container">
+            <div class="row clearfix">
+
+              <h2 style="color: black;"><strong>Top</strong> <strong> Dentists</strong> near me</h2>
+              @foreach(\App\Listings::where(array('featured_listing'=>'1','status'=>'1', 'location_id'=>$location_id))->orderBy('id')->get() as $featured_listing)
+
+                {{-- <div class="col-md-4 vendor-box" style="min-height:80px;"> --}}
+                  <div class="col-md-4 col-sm-4 col-xs-12 hi-icon-effect-8">
+                    <div class="single-product">
+
+                  <figure> 
+                    <div class="rating">
+                      <p>Verified</p>
+                    </div>
+                  </figure>
+
+                  <div class="vendor-detail">
+                    <div class="row">
+
+                      <div class="col-sm-1 col-xs-1">
+                      </div>
+                      <div class="col-sm-4 col-xs-4">
+                        <br>
+                        <div class="vendor-image">
+                          <img src="{{ URL::asset('upload/listings/'.$featured_listing->featured_image.'-s.jpg') }}" class="img-responsive" style="height: 55px; width: 55px">
+                        </div>
+                      </div>
+
+                <div class="col-sm-6 col-xs-6">
+                  <div class="caption">
+                    <h2><a class="word-limit" href="{{URL::to('listings/'.$featured_listing->listing_slug.'/'.$featured_listing->id)}}">{{$featured_listing->title}}</a>
+                    </h2>
+                    {{-- <p class="location" style="min-height:42px;">{{str_limit($listing->address,50)}}</p> --}}
+                    
+
+                    <div class="rating">
+                          <ul class="list-inline">
+                            @for($x = 0; $x < 5; $x++)
+                              
+                              @if($x < $featured_listing->review_avg)
+                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                @else
+                                <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                              @endif
+                           
+                            @endfor
+                            
+                          </ul>
+                        </div>
+                  </div>
+                </div>
+
+              </div>
+              </div>
+
+              </div>
+              </div>
+              @endforeach
+       </div>
+      </div>
+    </div> 
+
+
+
+      
+  
+  {{-- {{-- @include("_particles.sidebar")   --}}    --}}
+
+
+
+
+    <div class="col-md-12 col-sm-12">
+        <div class="row">
+          
+
+          {{-- Setting counter for ad space at 6 positions  --}}
+          @php
+          $counter = 1
+          @endphp
+
+          @foreach($listings as $listing)
+          {{-- echo $listings . "test listing" --}}
+          <div class="col-md-4 vendor-box" style="min-height:80px;">
+            {{-- <div class="vendor-image"> <a href="{{URL::to('listings/'.$listing->listing_slug.'/'.$listing->id)}}"><img src="{{ URL::asset('upload/listings/'.$listing->featured_image.'-s.jpg') }}" class="img-responsive" style="height: 20px; width: 20px"></a>
+            </div> --}}
+
+            @php
+            $counter += 1
+            @endphp
+
+            <div class="vendor-detail">
+
+              <div class="row">
+
+                <div class="col-sm-1 col-xs-1">
+                </div>
+                <div class="col-sm-4 col-xs-4">
+                  <br>
+                  <div class="vendor-image"> <a href="{{URL::to('listings/'.$listing->listing_slug.'/'.$listing->id)}}"><img src="{{ URL::asset('upload/listings/'.$listing->featured_image.'-s.jpg') }}" class="img-responsive" style="height: 55px; width: 55px"></a>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-xs-6">
+                  <div class="caption">
+                    <h2><a href="{{URL::to('listings/'.$listing->listing_slug.'/'.$listing->id)}}" class="title">{{$listing->title}}</a>
+                    </h2>
+                    {{-- <p class="location" style="min-height:42px;">{{str_limit($listing->address,50)}}</p> --}}
+                    
+
+                    <div class="rating"> 
+                      @for($x = 0; $x < 5; $x++)
+                      
+                        @if($x < $listing->review_avg)
+                          <i class="fa fa-star"></i>
+                        @else
+                          <i class="fa fa-star-o"></i>
+                        @endif
+                       
+                        @endfor
+                        <span class="rating-count">({{\App\Reviews::getTotalReview($listing->id)}})</span> 
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+              
+              <div class="clearfix"></div>
+            </div>
+
+          </div>
+
+          @if($counter == 7)
+            <br>
+
+            <div class="col-md-12 vendor-box" style="min-height:80px;">
+              <div class="vendor-detail">
+              <br>
+              <br><br><br>
+              <h1 style="text-align: center;">Ad Space</h1>
+              <br><br><br><br>
+              <br>
+              </div>
+            </div>
+            @endif
+
+          @endforeach
+
+         
+          <div class="row list-block-pagination">
+            <div class="pagination-center">
+              @include('_particles.pagination', ['paginator' => $listings])
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    
+    var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+    
+</script>
+
+ 
+@endsection

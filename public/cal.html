@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang = "en">
+   	<head>
+	    <meta charset = "utf-8">
+	    <title></title>
+	    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+	    <link rel="stylesheet" href="./sty.css">
+	    <link rel="stylesheet" href="./s.css">
+   	</head>
+   
+   	<body>
+      	<!-- <form> -->
+	      	<p>
+	      		<input type ="text" id="datepicker" class="t-d" placeholder="Select Date" />
+	      	</p>
+	      	<p>
+	      		<input type="text" id="timepicker" class="t-d" placeholder="Select Time" />
+	      	</p>
+		<!-- </form> -->
+
+
+		<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      	<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+	    <script src="./sjs.js"></script>
+	    <script type="text/javascript">
+	      	(function($) {
+
+	      		$(function() {
+	            $( "#datepicker" ).datepicker();
+	            $( "#datepicker" ).datepicker();
+	         });
+
+			    $(function() {
+			        $('input#timepicker').timepicker();
+			    });
+
+			})(jQuery);
+
+	    </script>
+   	</body>
+</html>

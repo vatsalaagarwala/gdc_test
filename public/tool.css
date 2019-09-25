@@ -1,0 +1,347 @@
+.control:checked ~ .conditional,
+			#immigrant:checked ~ .conditional,
+			#required-2:checked ~ .conditional
+			#option-2:checked ~ .conditional {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+			.control:not(:checked) ~ .conditional,
+			#immigrant:not(:checked) ~ .conditional,
+			#required-2:not(:checked) ~ .conditional,
+			#option-2:not(:checked) ~ .conditional {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+
+.control:checked ~ .conditional,
+			#gums:checked ~ .conditional,
+			#upper:checked ~ .conditional
+			#lower:checked ~ .conditional {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+			.control:not(:checked) ~ .conditional,
+			#gums:not(:checked) ~ .conditional,
+			#upper:not(:checked) ~ .conditional,
+			#lower:not(:checked) ~ .conditional {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+.control:checked ~ .conditional,
+			#lips:checked ~ .conditional,
+			#upper:checked ~ .conditional,
+			#lower:checked ~ .conditional,
+			#outside:checked ~ .conditional,
+			#inside:checked ~ .conditional {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+			.control:not(:checked) ~ .conditional,
+			#lips:not(:checked) ~ .conditional,
+			#upper:not(:checked) ~ .conditional,
+			#lower:not(:checked) ~ .conditional,
+			#outside:not(:checked) ~ .conditional,
+			#inside:not(:checked) ~ .conditional {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+.control:checked ~ .conditional,	
+			
+			#front:checked ~ .conditional,
+			#back:checked ~ .conditional,
+			#left:checked ~ .conditional
+			#right:checked ~ .conditional {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+			.control:not(:checked) ~ .conditional,			
+			#front:not(:checked) ~ .conditional,
+			#back:not(:checked) ~ .conditional,
+			#left:not(:checked) ~ .conditional,
+			#right:not(:checked) ~ .conditional {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+.control:checked ~ .conditional,
+			#palate:checked ~ .conditional,
+			#ulcer:checked ~ .conditional,
+			#injury:checked ~ .conditional,
+			#required-2:checked ~ .conditional
+			#option-2:checked ~ .conditional {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+			.control:not(:checked) ~ .conditional,
+			#palate:not(:checked) ~ .conditional,
+			#ulcer:not(:checked) ~ .conditional,
+			#injury:not(:checked) ~ .conditional,
+			#required-2:not(:checked) ~ .conditional,
+			#option-2:not(:checked) ~ .conditional {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+.control:checked ~ .conditional,
+			#teeth:checked ~ .conditional,
+			#immigrant:checked ~ .conditional,
+			#required-2:checked ~ .conditional
+			#option-2:checked ~ .conditional {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+			.control:not(:checked) ~ .conditional,
+			#teeth:not(:checked) ~ .conditional,
+			#immigrant:not(:checked) ~ .conditional,
+			#required-2:not(:checked) ~ .conditional,
+			#option-2:not(:checked) ~ .conditional {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+.control:checked ~ .conditional,
+			#tongue:checked ~ .conditional,
+			#required-2:checked ~ .conditional
+			#option-2:checked ~ .conditional {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+			.control:not(:checked) ~ .conditional,
+			#tongue:not(:checked) ~ .conditional,
+			#immigrant:not(:checked) ~ .conditional,
+			#required-2:not(:checked) ~ .conditional,
+			#option-2:not(:checked) ~ .conditional {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+.control:checked ~ .conditional,
+			#tonsils:checked ~ .conditional,
+			#redness:checked ~ .conditional,
+			#swelling:checked ~ .conditional,
+			#pain:checked ~ .conditional {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+			.control:not(:checked) ~ .conditional,
+			#tonsils:not(:checked) ~ .conditional,
+			#redness:not(:checked) ~ .conditional,
+			#swelling:not(:checked) ~ .conditional,
+			#pain:not(:checked) ~ .conditional {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+.control:checked ~ .conditional,
+			#gums:checked ~ .conditional, 
+			#upper:checked ~ .conditional,
+			#front:checked ~ .conditional,
+			#burningsensation:checked ~ .conditional,
+			#swellingGums:checked ~ .conditional,
+			#bleedingGums:checked ~ .conditional,
+			#rednessOfGums:checked ~ .conditional,
+			#pusDischarge:checked ~ .conditional,
+			#lessThanWeek:checked ~ .conditional,
+			#moreThanWeek:checked ~ .conditional {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+			.control:not(:checked) ~ .conditional,
+			#gums:not (:checked) ~ .conditional,
+			#upper:not (:checked) ~ .conditional,
+			#front:not (:checked) ~ .conditional,
+			#burningsensation:not (:checked) ~ .conditional,
+			#swellingGums:not (:checked) ~ .conditional,
+			#bleedingGums:not (:checked) ~ .conditional,
+			#rednessOfGums:not (:checked) ~ .conditional,
+			#pusDischarge:not (:checked) ~ .conditional,
+			#lessThanWeek:not (:checked) ~ .conditional,
+			#moreThanWeek:not (:checked) ~ .conditional {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+.control:checked ~ .conditional,
+			#tonsilsSymtomDuration ~ .conditional,
+			#lessThanWeek:checked ~ .conditional
+			#moreThanWeek:checked ~ .conditional,
+			#moreThanTwoWeek:checked ~ .conditional {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+			.control:not(:checked) ~ .conditional,
+			#tonsilsSymtomDuration:not(:checked) ~ .conditional,
+			#lessThanWeek:not(:checked) ~ .conditional,
+			#moreThanWeek:not(:checked) ~ .conditional,
+			#moreThanTwoWeek:not(:checked) ~ .conditional {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+.control:checked ~ .conditional,
+			#sensitivity:checked ~ .conditional,
+			#foodLodgement:checked ~ .conditional,
+			#crowdedTeeth:checked ~ .conditional,
+			#badOdour:checked ~ .conditional,
+			#plaqueDeposits:checked ~ .conditional,
+			#difficulty:checked ~ .conditional,
+			#yellowTeeth:checked ~ .conditional,
+			#stains:checked ~ .conditional,
+			#missingTooth:checked ~ .conditional,
+			#looseteeth:checked ~ .conditional {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+			.control:not(:checked) ~ .conditional,
+			#sensitivity:not(:checked) ~ .conditional,
+			#foodLodgement:not(:checked) ~ .conditional,
+			#crowdedTeeth:not(:checked) ~ .conditional,
+			#badOdour:not(:checked) ~ .conditional,
+			#plaqueDeposits:not(:checked) ~ .conditional,
+			#difficulty:not(:checked) ~ .conditional,
+			#yellowTeeth:not(:checked) ~ .conditional,
+			#stains:not(:checked) ~ .conditional,
+			#missingTooth:not(:checked) ~ .conditional,
+			#looseteeth:not(:checked) ~ .conditional{
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+.control:checked ~ .conditional,
+			#immigrant:checked ~ .conditional,
+			#required-2:checked ~ .conditional
+			#option-2:checked ~ .conditional {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+			.control:not(:checked) ~ .conditional,
+			#immigrant:not(:checked) ~ .conditional,
+			#required-2:not(:checked) ~ .conditional,
+			#option-2:not(:checked) ~ .conditional {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}

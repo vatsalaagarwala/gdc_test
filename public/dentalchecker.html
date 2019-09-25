@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Dental Checker -  Gentledental care</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body style="color: #ffffff" bgcolor="#229996">
+    <form action="/lead_capture" id="booking-form" method="POST">
+      <div class="tab-content" style="margin-top : 30%; font-size: 2rem;">
+        <div class="tab-pane" id="step1">
+          <ul>
+            <li> <label style="margin-top: -34px;">Select Region affected :-</label>
+              <div class="errorTxt"></div>
+              <select style="font-size : 2rem" name="Select1" id="region" value="region" required="" style="font-size: 2 rem;">
+                <option value="">Select</option>
+                <option value="Gums">Gums</option>
+                <option value="Teeth">Teeth</option>
+                <option value="Tongue">Tongue</option>
+                <option value="Lips">Lips</option>
+                <option value="Palate">Palate</option>
+                <option id="Tonsils">Tonsils</option>
+              </select>
+            </li>
+            <!-- <li style="list-style: none; display: inline">
+						<button class="next-btn next-btn1" type="button" value="next">Next</button>					</li> -->
+          </ul>
+          <!--gum  -->
+          <div class="tab-pane" id="stepgum">
+            <ul>
+              <li> <label>Which Part?</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="Select2" id="part" value="part">
+                  <option value="">Select</option>
+                  <option id="Upper">Upper</option>
+                  <option id="Lower">Lower</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="stepgumsymptom">
+            <ul>
+              <li> <label>Select Symptom</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="Select3" id="symptom" value="symptom">
+                  <option value="">Select</option>
+                  <option id="Burning Sensation">Burning Sensation</option>
+                  <option id="Swelling Gums">Swelling Gums</option>
+                  <option id="Bleeding Gums">Bleeding Gums</option>
+                  <option id="Redness of Gums">Redness of Gums</option>
+                  <option id="Pain">Pain</option>
+                  <option id="Pus Discharge">Pus Discharge</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="stepgumduration">
+            <ul>
+              <li> <label>Duration ?</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="Select2" id="gumdur" value="gumdur">
+                  <option value="">Select</option>
+                  <option id="Less than a week">Less than a week</option>
+                  <option id="More than a week">More than a week</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="bsltw">
+            <ul>
+              <li><label>Infection</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="bsmtw">
+            <ul>
+              <li><label>Deficiency</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="sgltw">
+            <ul>
+              <li><label>Inflammatory/ Non-Inflammatory Gingival Enlargement</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="sgmtw">
+            <ul>
+              <li><label>Inflammatory/ Non-Inflammatory Gingival Enlargement</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="bgltw">
+            <ul>
+              <li><label>Acute Gingivitis</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="bgmtw">
+            <ul>
+              <li><label>Chronic Gingivitis</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="rgltw">
+            <ul>
+              <li><label>Acute Gingivitis</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="rgmtw">
+            <ul>
+              <li><label>Chronic Gingivitis</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="pltw">
+            <ul>
+              <li><label>Acute Periodontitis</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="pmtw">
+            <ul>
+              <li><label>Chronic Periodontitis</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="pdltw">
+            <ul>
+              <li><label>Periapical/Periodontal abscess</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="pdmtw">
+            <ul>
+              <li><label>Periapical/Periodontal abscess</label></li>
+            </ul>
+          </div>
+          <!-- teeth -->
+          <div class="tab-pane" id="stepteeth">
+            <ul>
+              <li> <label>Which Part?</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="Select2" id="partTeeth" value="partTeeth">
+                  <option value="">Select</option>
+                  <option id="Upper">Upper</option>
+                  <option id="Lower">Lower</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="stepteethsymptom">
+            <ul>
+              <li> <label>Symptom?</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="Select3" id="symptomteeth" value="symptomteeth">
+                  <option value="">Select</option>
+                  <option id="Pain">Pain</option>
+                  <option id="Sensitivity">Sensitivity</option>
+                  <option id="Food Lodgement">Food Lodgement</option>
+                  <option id="Crowded Teeth">Crowded Teeth</option>
+                  <option id="Bad Ordour">Bad Ordour</option>
+                  <!-- <option id="Plaque Deposits">Plaque Deposits</option> -->
+                  <option id="Difficulty in Biting/Chewing">Difficulty in
+                    Biting/Chewing</option>
+                  <option id="Yellow Teeth">Yellow Teeth</option>
+                  <option id="Stains on Teeth">Stains on Teeth</option>
+                  <option id="Missing Tooth">Missing Tooth</option>
+                  <option id="Loose Teeth">Loose Teeth</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="stepteethactivity">
+            <ul>
+              <li> <label>When does it trouble you?</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="Select2" id="partTeethpain" value="partTeethpain">
+                  <option value="">Select</option>
+                  <option id="On Chewing">On Chewing</option>
+                  <option id="On Eating hot/cold">On Eating hot/cold</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="stepteethduration">
+            <ul>
+              <li> <label>Duration ?</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="Select2" id="teethdur" value="teethdur">
+                  <option value="">Select</option>
+                  <option id="Less than a week">Less than a week</option>
+                  <option id="More than a week">More than a week</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="stepteethdurationps">
+            <ul>
+              <li> <label>Duration of pain?</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="Select2" id="teethpsdur" value="teethpsdur">
+                  <option value="">Select</option>
+                  <option id="5 Seconds">5 Seconds</option>
+                  <option id="One Min">One Min</option>
+                  <option id="On relieving chewing pressure">On relieving
+                    chewing pressure</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="stepteethtemp">
+            <ul>
+              <li> <label>Temprature at which it hurts?</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="Select2" id="teethstemp" value="teethpstemp">
+                  <option value="">Select</option>
+                  <option id="Cold">Cold</option>
+                  <option id="Hot">Hot</option>
+                  <option id="None">None</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="durhc">
+            <ul>
+              <li> <label>Duration of pain?</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="Select2" id="tempdurhc" value="tempdurhc">
+                  <option value="">Select</option>
+                  <option value="fiveseconds" id="fiveseconds">5 Sec</option>
+                  <option value="OneMin" id="OneMin">One Min</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="none">
+            <ul>
+              <li><label>Pulp Necrosis</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="pc5">
+            <ul>
+              <li><label>Apical Periodontitis</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="p1m">
+            <ul>
+              <li><label>Periapical/ Periodontal abscess
+                </label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="porcp">
+            <ul>
+              <li><label>Cracked Tooth Syndrome</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="pecold5">
+            <ul>
+              <li><label>Reversible Pulpitis</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="pecold1m">
+            <ul>
+              <li><label>Irreversible Pulpitis</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="peh5">
+            <ul>
+              <li><label>Irreversible Pulpitis</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="peh1m">
+            <ul>
+              <li><label>Irreversible Pulpitis</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="peh1m">
+            <ul>
+              <li><label>Irreversible Pulpitis</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="flltw">
+            <ul>
+              <li> <label>Cavity</label>
+                <p> </p>
+                <blockquote> A&nbsp;dental cavity is one of the most common
+                  results of tooth decay and could be a sign of poor oral health
+                  and hygiene. Tooth decay is the softening of your tooth enamel
+                  and refers to the damage of the structure of the tooth caused
+                  by acids that are created when plaque bacteria break down
+                  sugar in your mouth. If this loss of mineral from the enamel
+                  is left untreated, a cavity, or hole in the tooth, can
+                  eventually occur. Probable treatments for Cavity include : <br>
+                  <br>
+                  <a href="/testuri?test=rct" target="_blank">RCT(Root Canal
+                    Treatment)</a> <a href="/testuri?test=filling" target="_blank">Filling</a>
+                  <a href="/testuri?test=crown" target="_blank">Crown</a> </blockquote>
+                <p></p>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="flmtw">
+            <ul>
+              <li> <label>Cavity</label>
+                <p> </p>
+                <blockquote> A&nbsp;dental cavity is one of the most common
+                  results of tooth decay and could be a sign of poor oral health
+                  and hygiene. Tooth decay is the softening of your tooth enamel
+                  and refers to the damage of the structure of the tooth caused
+                  by acids that are created when plaque bacteria break down
+                  sugar in your mouth. If this loss of mineral from the enamel
+                  is left untreated, a cavity, or hole in the tooth, can
+                  eventually occur. Probable treatments for Cavity include : <br>
+                  <br>
+                  <a href="/testuri?test=rct" target="_blank">RCT(Root Canal
+                    Treatment)</a> <a href="/testuri?test=filling" target="_blank">Filling</a>
+                  <a href="/testuri?test=crown" target="_blank">Crown</a> </blockquote>
+                <p></p>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="ctltw">
+            <ul>
+              <li><label>Malocclusion</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="ctmtw">
+            <ul>
+              <li><label>Malocclusion</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="boltw">
+            <ul>
+              <li><label>Halitosis</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="bomtw">
+            <ul>
+              <li><label>Halitosis</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="pdltw">
+            <ul>
+              <li><label>Poor Oral Hygiene</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="pdmtw">
+            <ul>
+              <li><label>Poor Oral Hygiene</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="dbltw">
+            <ul>
+              <li><label>Periodontitis</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="dbmtw">
+            <ul>
+              <li><label>Periodontitis</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="ytltw">
+            <ul>
+              <li><label>Tartar Deposits</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="ytmtw">
+            <ul>
+              <li><label>Tartar Deposits</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="stltw">
+            <ul>
+              <li><label>Tartar Deposits/Decay</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="stmtw">
+            <ul>
+              <li><label>Tartar Deposits/Decay</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="mtltw">
+            <ul>
+              <li><label>Collapsed Bite</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="mtmtw">
+            <ul>
+              <li><label>Collapsed Bite</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="ltltw">
+            <ul>
+              <li><label>Periodontitis</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="ltmtw">
+            <ul>
+              <li><label>Periodontitis</label></li>
+            </ul>
+          </div>
+          <!-- tongue -->
+          <div class="tab-pane" id="steptongue">
+            <ul>
+              <li> <label>Which Part?</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="Select2" id="partTongue" value="partTongue">
+                  <option value="">Select</option>
+                  <option id="Upper">Upper</option>
+                  <option id="Lower">Lower</option>
+                  <option id="Front">Front</option>
+                  <option id="Back">Back</option>
+                  <option id="Left">Left</option>
+                  <option id="Right">Right</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="steptonguesym">
+            <ul>
+              <li> <label>Symptom:-</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="Select2" id="tonguesym" value="tonguesym">
+                  <option value="">Select</option>
+                  <option id="Ulcer/Injury">Ulcer/Injury</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="steptongueduration">
+            <ul>
+              <li> <label>Duration ?</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="Select2" id="tonguedur" value="tonguedur">
+                  <option value="">Select</option>
+                  <option id="Less than a week">Less than a week</option>
+                  <option id="More than a week">More than a week</option>
+                  <option id="More than two weeks">More than two weeks</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="tlesstw">
+            <ul>
+              <li><label>Acute Inflammation of Tongue </label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="tmtw">
+            <ul>
+              <li><label>Chronic Inflammation of Tongue</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="tmttw">
+            <ul>
+              <li><label>Malignancy</label></li>
+            </ul>
+          </div>
+          <!-- lips -->
+          <div class="tab-pane" id="steplips">
+            <ul>
+              <li> <label>Which Part?</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="Select2" id="partlip" value="partlip">
+                  <option value="">Select</option>
+                  <option id="Outside">Outside</option>
+                  <option id="Inside">Inside</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="steplipssym">
+            <ul>
+              <li> <label>Symptom</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="Select2" id="lipsym" value="lipsym">
+                  <option value="">Select</option>
+                  <option id="Ulcer/Injury">Ulcer/Injury</option>
+                  <option id="Swelling">Swelling</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="steplipduration">
+            <ul>
+              <li> <label>Duration ?</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="Select2" id="lipdur" value="lipdur">
+                  <option value="">Select</option>
+                  <option id="Less than a week">Less than a week</option>
+                  <option id="More than a week">More than a week</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="ulltw">
+            <ul>
+              <li><label>Trauma/Infection</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="umttw">
+            <ul>
+              <li><label>Infection/Malignancy</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="slltw">
+            <ul>
+              <li><label>Allergy/Acute Inflammation</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="smttw">
+            <ul>
+              <li><label>Cyst/Tumour</label></li>
+            </ul>
+          </div>
+          <!-- palate -->
+          <div class="tab-pane" id="steppalate">
+            <ul>
+              <li> <label>Which Part?</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="Select2" id="partpalate" value="partpalate">
+                  <option value="">Select</option>
+                  <option id="Front">Front</option>
+                  <option id="Back">Back</option>
+                  <option id="Left">Left</option>
+                  <option id="Right">Right</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="steppalatesym">
+            <ul>
+              <li> <label>Select Symptom:-</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="Select2" id="palatesym" value="palatesym&quot;">
+                  <option value="">Select</option>
+                  <option id="Ulcer">Ulcer</option>
+                  <option id="Injury">Injury</option>
+                  <option id="Swelling">Swelling</option>
+                  <option id="Pain">Pain</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="steppalateduration">
+            <ul>
+              <li> <label>Duration ?</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="Select2" id="palatedur" value="palatedur">
+                  <option value="">Select</option>
+                  <option id="Less than a week">Less than a week</option>
+                  <option id="More than a week">More than a week</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="upaltw">
+            <ul>
+              <li><label>Trauma/Infection</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="upamtw">
+            <ul>
+              <li><label>Malignancy</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="ipaltw">
+            <ul>
+              <li><label>Trauma/Infection</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="ipamtw">
+            <ul>
+              <li><label>Malignancy</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="spaltw">
+            <ul>
+              <li><label>Trauma/Infection</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="spamtw">
+            <ul>
+              <li><label>Cyst/Tumour</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="ppaltw">
+            <ul>
+              <li><label>Trauma/Infection</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="ppamtw">
+            <ul>
+              <li><label>Malignancy</label></li>
+            </ul>
+          </div>
+          <!-- tonsil symtom -->
+          <div class="tab-pane" id="steptonsil">
+            <ul>
+              <li> <label>Select Symptom:-</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="Select2" id="Symptom" value="Symptom">
+                  <option value="">Select</option>
+                  <option id="Redness">Redness</option>
+                  <option id="Swelling">Swelling</option>
+                  <option id="Pain">Pain</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="steptonsilduration">
+            <ul>
+              <li> <label>Duration ?</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="Select2" id="tonsildur" value="tonsildur">
+                  <option value="">Select</option>
+                  <option id="Less than a week">Less than a week</option>
+                  <option id="More than a week">More than a week</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="trltw">
+            <ul>
+              <li><label>Acute Tonsilitis</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="trmtw">
+            <ul>
+              <li><label>Chronic Tonsilitis</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="tsltw">
+            <ul>
+              <li><label>Acute Tonsilitis</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="tsmtw">
+            <ul>
+              <li><label>Chronic Tonsilitis</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="tpltw">
+            <ul>
+              <li><label>Acute Tonsilitis</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="tpmtw">
+            <ul>
+              <li><label>Chronic Tonsilitis</label></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="step3">
+            <ul>
+              <li> <label>Which date and time are you looking to book on?</label>
+                <div class="errorTxt"></div>
+                <input class="datepicker" name="bf_date" type="text"> </li>
+              <li> <label>Which time of day?</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="bf_time">
+                  <option value="">Select</option>
+                  <option value="Morning">Morning</option>
+                  <option value="Midday">Midday</option>
+                  <option value="Late afternoon, ending with a sunset">Late
+                    afternoon, ending with a sunset</option>
+                </select>
+              </li>
+              <li> <label>How many hours would you like to charter for?</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="bf_hours">
+                  <option value="">Select</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="Overnight (24 hours)">Overnight (24 hours)</option>
+                </select>
+              </li>
+              <li> <button class="next-btn next-btn2" type="button">Next</button>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="step3">
+            <ul>
+              <li> <label>Which date and time are you looking to book on?</label>
+                <div class="errorTxt"></div>
+                <input class="datepicker" name="bf_date" type="text"> </li>
+              <li> <label>Which time of day?</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="bf_time">
+                  <option value="">Select</option>
+                  <option value="Morning">Morning</option>
+                  <option value="Midday">Midday</option>
+                  <option value="Late afternoon, ending with a sunset">Late
+                    afternoon, ending with a sunset</option>
+                </select>
+              </li>
+              <li> <label>How many hours would you like to charter for?</label>
+                <div class="errorTxt"></div>
+                <select style="font-size : 2rem" name="bf_hours">
+                  <option value="">Select</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="Overnight (24 hours)">Overnight (24 hours)</option>
+                </select>
+              </li>
+              <li> <button class="next-btn next-btn3" type="button">Next</button>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="info">
+            <ul>
+              <li> <label>What is your first and last name?</label>
+                <div class="errorTxt"></div>
+                <input name="lead_name" type="text"> </li>
+              <li> <label>What is your contact number ?</label>
+                  <div class="errorTxt"></div>
+                  <input name="lead_number" type="number"> </li>
+              <li> <label>What is your email address ?</label>
+                <div class="errorTxt"></div>
+                <input name="lead_email" type="email"> </li>
+              <blockquote style="text-align: center;"> &gt; Do you want to know
+                what's ailing you ? &lt; </blockquote>
+              <!-- <li>
+            <label>Do you have any questions or a message? (Optional)</label>					  <textarea name="bf_message"></textarea>
+					</li>					<li> -->
+            </ul>
+          </div>
+        </div>
+        <div class="tab-pane" id="buttonInfection"> 
+          <button class="submit-btn"
+            id="buttonInfection"
+            type="submit"
+            style="color: red">Yes,
+            Tell Me</button> </div>
+        <div class="tab-pane" id="buttonDeficiency"> 
+          <button class="submit-btn"
+            id="buttonDeficiency"
+            type="submit"
+            style="color: red">Yes,
+            Tell Me</button> </div>
+        <div class="tab-pane" id="buttonInflammatory"> 
+          <button class="submit-btn"
+            id="buttonInflammatoryEnlargement"
+            type="submit"
+            style="color: red">Yes,
+            Tell Me</button> </div>
+        <div class="tab-pane" id="buttonPeriodontitis"> 
+          <button class="submit-btn"
+            id="buttonPeriodontitis"
+            type="submit"
+            style="color: red">Yes,
+            Tell Me</button> </div>
+        <div class="tab-pane" id="buttonAbscess"> 
+          <button class="submit-btn" id="buttonAbscess"
+            type="submit"
+            style="color: red">Yes,
+            Tell Me</button> </div>
+        <div class="tab-pane" id="buttonMalocclusion"> 
+          <button class="submit-btn"
+            id="buttonMalocclusion"
+            type="submit"
+            style="color: red">Yes,
+            Tell Me</button> </div>
+        <div class="tab-pane" id="buttonHalitosis"> 
+          <button class="submit-btn"
+            id="buttonHalitosis"
+            type="submit"
+            style="color: red">Yes,
+            Tell Me</button> </div>
+        <div class="tab-pane" id="buttonMalignancy"> 
+          <button class="submit-btn"
+            id="buttonMalignancy"
+            type="submit"
+            style="color: red">Yes,
+            Tell Me</button> </div>
+        <div class="tab-pane" id="buttonCollapsed Bite"> 
+          <button class="submit-btn"
+            id="buttonCollapsed Bite"
+            type="submit"
+            style="color: red">Yes,
+            Tell Me</button> </div>
+        <div class="tab-pane" id="buttonDepositsDecay"> 
+          <button class="submit-btn"
+            id="buttonDepositsDecay"
+            type="submit"
+            style="color: red">Yes,
+            Tell Me</button> </div>
+        <div class="tab-pane" id="buttonCystTumour"> 
+          <button class="submit-btn"
+            id="buttonCystTumour"
+            type="submit"
+            style="color: red">Yes,
+            Tell Me</button> </div>
+        <div class="tab-pane" id="buttonTonsil"> 
+          <button class="submit-btn" id="buttonTonsil"
+            type="submit"
+            style="color: red">Yes,
+            Tell Me</button> </div>
+        <div class="tab-pane" id="buttonGingivitis"> 
+          <button class="submit-btn"
+            id="gingivitisBtn"
+            type="submit"
+            style="color: red">Yes,
+            Tell Me</button> </div>
+        <div class="tab-pane" id="buttonCavity"> 
+          <button class="submit-btn" id="cavityBtn"
+            type="submit"
+            style="color: red">Yes,
+            Tell Me</button> </div>
+        <div class="tab-pane" id="buttonPulpitis"> 
+          <button class="submit-btn" id="pulpitisBtn"
+            type="submit"
+            style="color: red">Yes,
+            Tell Me</button> </div>
+        <div class="tab-pane" id="buttonNecrosis"> 
+          <button class="submit-btn" id="necrosisBtn"
+            type="submit"
+            style="color: red">Yes,
+            Tell Me</button> </div>
+        <div class="tab-pane" id="buttonCracked"> 
+          <button class="submit-btn" id="buttonCracked"
+            type="submit"
+            style="color: red">Yes,
+            Tell Me</button> </div>
+        <br>
+        <br>
+        <div class="progress-wrap">
+          <div class="line-progress-bar">
+            <div class="line"></div>
+            <ul class="checkout-bar">
+              <li class="progressbar-dots active"><span>step 1</span></li>
+              <li class="progressbar-dots"><span>step 2</span></li>
+              <li class="progressbar-dots"><span>step 3</span></li>
+              <li class="progressbar-dots"><span>step 4</span></li>
+              <li class="progressbar-dots"><span>Final step</span></li>
+            </ul>
+          </div>
+        </div>
+        <div id="loader" style="display: none;">
+          <!-- <img src="//d2erq0e4xljvr7.cloudfront.net/assets/img/ring.svg"> -->
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+        <script src="js/index.js"></script>
+      </div>
+    </form>
+  </body>
+</html>
